@@ -50,8 +50,5 @@ Outputs are written to `outputs-r/`.
 ## Reproducibility and limitations
 All data are generated locally from documented distributions and explicit seeds. R and NumPy use different random-number generators, so their data will not be identical. The implementations are reference/learning code, not a replacement for specialist solvers. Fixed-step algorithms rely on convexity and step-size assumptions. The plotted objective-gap proxy is not a certified optimality gap.
 
-## Suggested CV entry
-**VMOM-Lab — Variational Methods and Monotone Operators Laboratory.** Developed reproducible Python and R implementations of proximal-gradient methods (ISTA/FISTA) for nonsmooth convex optimization; studied sparse recovery, regularization, convergence diagnostics, and the resolvent interpretation of proximal maps; added unit tests and deterministic experiment pipelines.
 
-## License
-MIT; see `LICENSE`.
+
