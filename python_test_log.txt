@@ -1,0 +1,29 @@
+Command: python -m unittest discover -s tests -v
+
+
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
+test_group_lasso (test_operators.OperatorTests.test_group_lasso) ... ok
+test_overlap_rejected (test_operators.OperatorTests.test_overlap_rejected) ... ok
+test_project_box (test_operators.OperatorTests.test_project_box) ... ok
+test_prox_l1 (test_operators.OperatorTests.test_prox_l1) ... ok
+test_soft_threshold (test_operators.OperatorTests.test_soft_threshold) ... ok
+test_fista_competitive_objective (test_solvers.SolverTests.test_fista_competitive_objective) ... ok
+test_forward_backward_quadratic (test_solvers.SolverTests.test_forward_backward_quadratic) ... ok
+test_monotone_fista_history (test_solvers.SolverTests.test_monotone_fista_history) ... ok
+test_projected_vi (test_solvers.SolverTests.test_projected_vi) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.029s
+
+OK
+
+Return code: 0

@@ -1,0 +1,12 @@
+source("R/operators.R"); source("R/solvers.R")
+stopifnot(isTRUE(all.equal(soft_threshold(c(-2,-.2,.5,3),1),c(-1,0,0,2))))
+stopifnot(isTRUE(all.equal(project_box(c(-1,.5,2)),c(0,.5,1))))
+set.seed(7); n<-80; p<-40
+A<-matrix(rnorm(n*p),n,p); truth<-c(rnorm(5),rep(0,p-5))
+y<-as.vector(A%*%truth+rnorm(n,sd=.02))
+a<-ista(A,y,lambda=.025,max_iter=1200)
+b<-fista(A,y,lambda=.025,max_iter=1200,monotone=TRUE)
+stopifnot(all(is.finite(a$x)),all(is.finite(b$x)))
+stopifnot(tail(b$objective,1)<=b$objective[1]+1e-10)
+stopifnot(tail(b$objective,1)<=tail(a$objective,1)+1e-3)
+cat("All base-R tests passed.\n")
